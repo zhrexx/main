@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Find Word and Scroll</title>
+    <style>
+        #scrollTarget {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="searchInput" placeholder="Enter a word">
+    <div id="content">
+    <p>Guten Morgen. - Bonjour.</p>
+    <p>Wie geht es dir? - Comment ça va ?</p>
+    <p>Ich bin gut. - Je vais bien.</p>
+    <p>Was ist das? - Qu'est-ce que c'est ?</p>
+    <p>Ich verstehe nicht. - Je ne comprends pas.</p>
+    <p>Entschuldigung. - Pardon.</p>
+    <p>Bitte. - S'il vous plaît.</p>
+    <p>Danke. - Merci.</p>
+    <p>Ja. - Oui.</p>
+    <p>Vielleicht. - Peut-être.</p>
+    <p>Bis später. - À plus tard.</p>
+    <p>Bis morgen. - À demain.</p>
+    <p>Ich auch. - Moi aussi.</p>
+    <p>Ich auch nicht. - Moi non plus.</p>
+    <p>Wie viel kostet das? - Combien ça coûte ?</p>
+    <p>Ich weiß nicht. - Je ne sais pas.</p>
+    <p>Wo ist der Bahnhof? - Où est la gare ?</p>
+    <p>Wo ist der Strand? - Où est la plage ?</p>
+    <p>Ja, bitte. - Oui, s'il vous plaît.</p>
+    <p>Nein, danke. - Non, merci.</p>
+    <p>Ich liebe dich. - Je t'aime.</p>
+    <p>Ich mag Musik. - J'aime la musique.</p>
+    <p>Ich möchte essen. - Je veux manger.</p>
+    <p>Ich möchte trinken. - Je veux boire.</p>
+    <p>Ich möchte schlafen. - Je veux dormir.</p>
+    <p>Ich habe mich verlaufen. - Je suis perdu.</p>
+    <p>Wo sind die Toiletten? - Où sont les toilettes ?</p>
+    <p>Ich bin spät dran. - Je suis en retard.</p>
+    <p>Es ist heiß. - Il fait chaud.</p>
+    <p>Es ist kalt. - Il fait froid.</p>
+    <p>Es regnet. - Il pleut.</p>
+    <p>Es schneit. - Il neige.</p>
+    <p>Es ist köstlich. - C'est délicieux.</p>
+    <p>Ich verstehe die Speisekarte nicht. - Je ne comprends pas le menu.</p>
+    <p>Wie ist dein Vorname? - Quel est ton prénom ?</p>
+    <p>Wie ist dein Nachname? - Quel est ton nom de famille ?</p>
+    <p>Wie heißt du? - Comment tu t'appelles ?</p>
+    <p>Wo wohnst du? - Où habites-tu ?</p>
+    <p>Wie alt bist du? - Quel âge as-tu ?</p>
+    <p>Was machst du? - Qu'est-ce que tu fais ?</p>
+    <p>Ich reise. - Je voyage.</p>
+    <p>Ich lese ein Buch. - Je lis un livre.</p>
+    <p>Ich sehe fern. - Je regarde la télévision.</p>
+    <p>Ich mache Sport. - Je fais du sport.</p>
+    <p>Ich arbeite. - Je travaille.</p>
+    <p>Ich ruhe mich aus. - Je me repose.</p>
+    <p>Ich bin im Urlaub. - Je suis en vacances.</p>
+    <p>Ich lerne Französisch. - Je suis en train d'apprendre le français.</p>
+    <p>Ich spreche ein wenig Französisch. - Je parle un peu français.</p>
+    <p>Ich bin hier als Tourist. - Je suis ici en touriste.</p>
+    <p>Ich bin auf Dienstreise. - Je suis en voyage d'affaires.</p>
+    <p>Ich bin mit meiner Familie. - Je suis avec ma famille.</p>
+    <p>Ich bin mit Freunden. - Je suis avec des amis.</p>
+    <p>Ich bin allein. - Je suis seul(e).</p>
+    <p>Ich habe mich verlaufen. - Je suis perdu(e).</p>
+    <p>Es tut mir leid. - Je suis désolé(e).</p>
+    <p>Ich verstehe nicht. - Je ne comprends pas.</p>
+    <p>Ich spreche nicht gut Französisch. - Je ne parle pas bien français.</p>
+    <p>Ich möchte Wasser. - Je voudrais de l'eau.</p>
+    <p>Ich möchte einen Kaffee. - Je voudrais un café.</p>
+    <p>Ich möchte einen Tee. - Je voudrais un thé.</p>
+    <p>Ich möchte ein Croissant. - Je voudrais un croissant.</p>
+    <p>Ich möchte ein Baguette. - Je voudrais une baguette.</p>
+    <p>Ich möchte Eis. - Je voudrais une glace.</p>
+    <p>Ich möchte ein Bier. - Je voudrais une bière.</p>
+    <p>Ich möchte eine Flasche Rotwein. - Je voudrais une bouteille de vin rouge.</p>
+    <p>Ich möchte ein Zugticket. - Je voudrais un billet pour le train.</p>
+    <p>Ich möchte ein Zimmer für eine Nacht. - Je voudrais une chambre pour une nuit.</p>
+    <p>Ich möchte eine Kreditkarte. - Je voudrais une carte de crédit.</p>
+    <p>Ich möchte einen Stadtplan. - Je voudrais un plan de la ville.</p>
+    <p>Ich möchte Geld. - Je voudrais de l'argent.</p>
+    <p>Ich möchte ein Taxi. - Je voudrais un taxi.</p>
+    <p>Ich möchte die Polizei rufen. - Je voudrais appeler la police.</p>
+    <p>Ich möchte einen Krankenwagen rufen. - Je voudrais appeler une ambulance.</p>
+    <p>Ich möchte Hilfe. - Je voudrais de l'aide.</p>
+    <p>Ich möchte ein Souvenir kaufen. - Je voudrais acheter un souvenir.</p>
+    <p>Ich möchte ein Museum besuchen. - Je voudrais visiter un musée.</p>
+    <p>Ich möchte Fotos machen. - Je voudrais prendre des photos.</p>
+     <p>chat - Katze</p>
+     <p>chien - Hund</p>
+     <p>maison - Haus</p>
+     <p>arbre - Baum</p>
+     <p>fleur - Blume</p>
+     <p>soleil - Sonne</p>
+     <p>lune - Mond</p>
+     <p>eau - Wasser</p>
+     <p>feu - Feuer</p>
+     <p>vent - Wind</p>
+     <p>pain - Brot</p>
+    <p>fromage - Käse</p>
+    <p>vin - Wein</p>
+    <p>bois - Wald</p>
+    <p>montagne - Berg</p>
+    <p>mer - Meer</p>
+    <p>rivière - Fluss</p>
+    <p>étoile - Stern</p>
+    <p>terre - Erde</p>
+    <p>courir - rennen</p>
+    <p>voler - fliegen</p>
+    <p>nager - schwimmen</p>
+    <p>manger - essen</p>
+    <p>boire - trinken</p>
+    <p>lire - lesen</p>
+    <p>écrire - schreiben</p>
+    <p>penser - denken</p>
+    <p>parler - sprechen</p>
+    <p>voir - sehen</p>
+    <p>entendre - hören</p>
+    <p>savoir - wissen</p>
+    <p>apprendre - lernen</p>
+    <p>comprendre - verstehen</p>
+    <p>travailler - arbeiten</p>
+    <p>étudier - studieren</p>
+    <p>jouer - spielen</p>
+    <p>dormir - schlafen</p>
+    <p>rêver - träumen</p>
+    <p>réveiller - aufwachen</p>
+    <p>chanter - singen</p>
+    <p>danser - tanzen</p>
+    <p>rire - lachen</p>
+    <p>pleurer - weinen</p>
+    <p>courir - rennen</p>
+    <p>marcher - laufen</p>
+    <p>descendre - hinuntergehen</p>
+    <p>monter - hinaufgehen</p>
+    <p>entrer - eintreten</p>
+    <p>sortir - hinausgehen</p>
+    <p>arriver - ankommen</p>
+    <p>partir - abfahren</p>
+    <p>rester - bleiben</p>
+    <p>venir - kommen</p>
+    <p>aller - gehen</p>
+    <p>retourner - zurückkehren</p>
+    <p>partager - teilen</p>
+    <p>aimer - mögen</p>
+    <p>détester - hassen</p>
+    <p>choisir - wählen</p>
+    <p>acheter - kaufen</p>
+    <p>vendre - verkaufen</p>
+    <p>donner - geben</p>
+    <p>prendre - nehmen</p>
+    <p>laisser - lassen</p>
+    <p>regarder - schauen</p>
+    <p>écouter - hören</p>
+    <p>sentir - riechen</p>
+    <p>goûter - schmecken</p>
+    <p>toucher - berühren</p>
+    <p>sentir - fühlen</p>
+    <p>vivre - leben</p>
+    <p>mourir - sterben</p>
+    <p>naître - geboren werden</p>
+    <p>grand - groß</p>
+    <p>petit - klein</p>
+    <p>jeune - jung</p>
+    <p>vieux - alt</p>
+    <p>bon - gut</p>
+    <p>mauvais - schlecht</p>
+    <p>beau - schön</p>
+    <p>moche - hässlich</p>
+    <p>heureux - glücklich</p>
+    <p>triste - traurig</p>
+    <p>fort - stark</p>
+    <p>faible - schwach</p>
+    <p>chaud - warm</p>
+    <p>froid - kalt</p>
+    <p>riche - reich</p>
+    <p>pauvre - arm</p>
+    <p>propre - sauber</p>
+    <p>sale - schmutzig</p>
+    <p>rapide - schnell</p>
+    <p>lent - langsam</p>
+    <p>joli - hübsch</p>
+    <p>vilain - hässlich</p>
+    <p>amusant - lustig</p>
+    <p>ennuyeux - langweilig</p>
+    <p>intéressant - interessant</p>
+    <p>difficile - schwer</p>
+    <p>facile - einfach</p>
+    <p>calme - ruhig</p>
+    <p>bruyant - laut</p>
+    <p>proche - nah</p>
+    <p>loin - weit</p>
+    <p>ouvert - offen</p>
+    <p>fermé - geschlossen</p>
+    <p>haut - hoch</p>
+    <p>bas - niedrig</p>
+    <p>plein - voll</p>
+    <p>vide - leer</p>
+    <p>lourd - schwer</p>
+    <p>léger - leicht</p>
+    <p>sale - schmutzig</p>
+    <p>propre - sauber</p>
+    <p>clair - klar</p>
+    <p>sombre - dunkel</p>
+    <p>gros - dick</p>
+    <p>mince - dünn</p>
+    <p>vieux - alt</p>
+    <p>jeune - jung</p>
+    <p>riche - reich</p>
+    <p>pauvre - arm</p>
+    <p>fort - stark</p>
+    <p>faible - schwach</p>
+    <p>grand - groß</p>
+    <p>petit - klein</p>
+    <p>chaud - heiß</p>
+    <p>froid - kalt</p>
+    <p>dur - hart</p>
+    <p>facile - leicht</p>
+    <p>lent - langsam</p>
+    <p>rapide - schnell</p>
+    <p>haut - hoch</p>
+    <p>bas - niedrig</p>
+    <p>long - lang</p>
+    <p>court - kurz</p>
+    <p>jeune - jung</p>
+    <p>vieux - alt</p>
+    <p>riche - reich</p>
+    <p>pauvre - arm</p>
+    <p>propre - sauber</p>
+    <p>sale - schmutzig</p>
+    <p>clair - hell</p>
+    <p>sombre - dunkel</p>
+    <p>gros - dick</p>
+    <p>mince - dünn</p>
+    <p>bon - gut</p>
+    <p>mauvais - schlecht</p>
+    <p>beau - schön</p>
+    <p>laid - hässlich</p>
+    <p>lent - langsam</p>
+    <p>rapide - schnell</p>
+    <p>juste - richtig</p>
+    <p>faux - falsch</p>
+    <p>droit - gerade</p>
+    <p>gauche - links</p>
+    <p>haut - oben</p>
+    <p>bas - unten</p>
+    <p>aujourd'hui - heute</p>
+    <p>demain - morgen</p>
+    <p>hier - gestern</p>
+    <p>maintenant - jetzt</p>
+    <p>tôt - früh</p>
+    <p>tard - spät</p>
+    <p>jamais - nie</p>
+    <p>toujours - immer</p>
+    <p>ici - hier</p>
+    <p>là - dort</p>
+    <p>partout - überall</p>
+    <p>nulle part - nirgendwo</p>
+    <p>beaucoup - viel</p>
+    <p>peu - wenig</p>
+    <p>plus - mehr</p>
+    <p>moins - weniger</p>
+    <p>maintenant - jetzt</p>
+    <p>plus tard - später</p>
+    <p>ici - hier</p>
+    <p>là - dort</p>
+    <p>partout - überall</p>
+    <p>nulle part - nirgendwo</p>
+    <p>beaucoup - viel</p>
+    <p>peu - wenig</p>
+    <p>plus - mehr</p>
+    <p>moins - weniger</p>
+    <p>toujours - immer</p>
+    <p>jamais - nie</p>
+    <p>depuis - seit</p>
+    <p>avant - vor</p>
+    <p>après - nach</p>
+    <p>pendant - während</p>
+    <p>pour - für</p>
+    <p>avec - mit</p>
+    <p>sans - ohne</p>
+    <p>contre - gegen</p>
+    <p>pour - für</p>
+    <p>avec - mit</p>
+    <p>sans - ohne</p>
+    <p>contre - gegen</p>
+    <p>sous - unter</p>
+    <p>sur - auf</p>
+    <p>dans - in</p>
+    <p>devant - vor</p>
+    <p>derrière - hinter</p>
+    <p>à côté de - neben</p>
+    <p>entre - zwischen</p>
+    <p>à travers - durch</p>
+    <p>au-dessus de - über</p>
+    <p>en dessous de - unter</p>
+    <p>autour de - um</p>
+    <p>à gauche de - links von</p>
+    <p>à droite de - rechts von</p>
+    </div>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                findAndScroll();
+            }
+        });
+
+        function findAndScroll() {
+            const searchText = document.getElementById("searchInput").value.toLowerCase();
+            const content = document.getElementById("content");
+            const paragraphs = content.getElementsByTagName("p");
+
+            for (let i = 0; i < paragraphs.length; i++) {
+                const paragraphText = paragraphs[i].textContent.toLowerCase();
+                if (paragraphText.includes(searchText)) {
+                    paragraphs[i].scrollIntoView({ behavior: "smooth", block: "center" });
+                    paragraphs[i].style.backgroundColor = "yellow";
+                } else {
+                    paragraphs[i].style.backgroundColor = "transparent";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
