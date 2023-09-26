@@ -1,0 +1,73 @@
+.nav-bar{
+	height: 150px;
+	width: 450px;
+	display: flex;
+    align-items:center;
+    justify-items: center;
+	border:2px black;
+    margin-top: -60px;
+	
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        background-color:black;
+    }
+    15%{
+        transform: scale(1.02);
+        background-color: gold;
+    }
+    25% {
+        transform: scale(1.04);
+        background-color: darkred;
+    }
+    50% {
+        transform: scale(1.07);
+        background-color: red; /* Change to your desired hover color */
+    }
+    75% {
+        transform: scale(1.04);
+        background-color: darkred;
+    }
+    85%{
+        transform: scale(1.02);
+        background-color: gold;
+    }
+    100% {
+        transform: scale(1);
+        background-color: black;
+    }
+}
+button:hover{
+	animation: pulse 2.4s infinite;
+}
+
+button {
+    padding: 5px 5px;
+    background-color: #0077FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.logo{
+    padding: 5px 5px;
+    width: 85px;
+    height: 85px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 15%;
+}
+.lg{
+    float: right;
+    align-items: top;
+    margin-top: 50px;
+    margin-right: -40px;
+}
+body{
+    background-image:url("bg.png");
+    background-size: 1980px 1600px;
+
+}
